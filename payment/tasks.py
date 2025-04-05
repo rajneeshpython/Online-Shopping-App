@@ -19,7 +19,7 @@ def payment_completed(order_id):
     # create invoice e-mail
     subject = f"My Shop - Invoice no. {order.id}"
     message = "Please, find attached the invoice for your recent purchase."
-    email = EmailMessage(subject, message, "rajneeshpython@gmail.com", [order.email])
+    email = EmailMessage(subject, message, "admin@shop.com", [order.email])
     # generate PDF
     html = render_to_string("orders/order/pdf.html", {"order": order})
     out = BytesIO()
