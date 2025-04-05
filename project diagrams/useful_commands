@@ -9,3 +9,5 @@ celery -A myshop worker --pool=solo -l info
 celery -A myshop flower
 
 celery -A myshop flower --basic-auth=admin:admin
+
+stripe listen --forward-to 127.0.0.1:8000/payment/webhook/
